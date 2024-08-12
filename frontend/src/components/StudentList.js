@@ -9,7 +9,7 @@ const StudentList = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/students', {
+        const response = await axios.get('https://classroombackend-2kdy.onrender.com/api/students', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -57,7 +57,7 @@ const StudentList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/students/${id}`, {
+      await axios.delete(`https://classroombackend-2kdy.onrender.com/api/students/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

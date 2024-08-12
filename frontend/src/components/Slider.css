@@ -1,0 +1,12 @@
+/* Ensure the carousel container has a defined height */
+.carousel {
+    max-height: 400px; /* Adjust this value as needed */
+  }
+  
+  /* Ensure the image fits well in the carousel */
+  .slider-image {
+    object-fit: cover; /* Ensure the image covers the container */
+    height: 100%; /* Make the image height fit the carousel container */
+    width: 100%; /* Make the image width fit the carousel container */
+  }
+  

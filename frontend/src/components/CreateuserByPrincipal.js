@@ -12,7 +12,7 @@ const SignupPage = () => {
     const token = localStorage.getItem('token'); // Assuming the token is stored in localStorage
 
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', {
+      await axios.post('https://classroombackend-2kdy.onrender.com/api/auth/signup', {
         name,
         email,
         password,

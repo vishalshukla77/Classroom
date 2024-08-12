@@ -12,7 +12,7 @@ const Timetable = ({ timetable, setTimetable, classroomId }) => {
   const handleCreateTimetable = async () => {
     const token = localStorage.getItem('token');
     try {
-      await axios.post(`http://localhost:5000/api/teachers/timetable/${classroomId}`, {
+      await axios.post(`https://classroombackend-2kdy.onrender.com/api/teachers/timetable/${classroomId}`, {
         day,
         startTime,
         endTime,

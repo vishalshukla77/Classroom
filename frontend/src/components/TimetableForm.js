@@ -11,7 +11,7 @@ const TimetableForm = () => {
     // Fetch the list of timetables on component mount
     const fetchTimetables = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/timetables');
+        const response = await axios.get('https://classroombackend-2kdy.onrender.com/api/timetables');
         setTimetables(response.data);
       } catch (error) {
         console.error('Error fetching timetables:', error);
@@ -23,7 +23,7 @@ const TimetableForm = () => {
 
   const handleSelectTimetable = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/timetables/${id}`);
+      const response = await axios.get(`https://classroombackend-2kdy.onrender.com/api/timetables/${id}`);
       setSelectedTimetable(response.data);
       setFormData(response.data); // Set initial form data
     } catch (error) {
@@ -39,10 +39,10 @@ const TimetableForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/timetables/${formData._id}`, formData);
+      await axios.put(`https://classroombackend-2kdy.onrender.com/api/timetables/${formData._id}`, formData);
       alert('Timetable updated successfully');
       // Optionally refresh the list of timetables
-      const response = await axios.get('http://localhost:5000/api/timetables');
+      const response = await axios.get('https://classroombackend-2kdy.onrender.com/api/timetables');
       setTimetables(response.data);
     } catch (error) {
       console.error('Error updating timetable:', error);

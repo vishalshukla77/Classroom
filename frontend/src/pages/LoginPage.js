@@ -11,7 +11,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://classroombackend-2kdy.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       if (response.data.user.role === 'Teacher') {
         navigate('/teacherdashboard');

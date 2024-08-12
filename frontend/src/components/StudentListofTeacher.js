@@ -16,7 +16,7 @@ const StudentListofTeacher = ({ students, setStudents }) => {
   const handleDelete = async (id) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:5000/api/teachers/students/${id}`, {
+      await axios.delete(`https://classroombackend-2kdy.onrender.com/api/teachers/students/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStudents(students.filter(student => student._id !== id));
@@ -28,7 +28,7 @@ const StudentListofTeacher = ({ students, setStudents }) => {
   const handleSaveChanges = async () => {
     const token = localStorage.getItem('token');
     try {
-      await axios.put(`http://localhost:5000/api/teachers/students/${selectedStudent._id}`, {
+      await axios.put(`https://classroombackend-2kdy.onrender.com/api/teachers/students/${selectedStudent._id}`, {
         name: newName
       }, {
         headers: { Authorization: `Bearer ${token}` }

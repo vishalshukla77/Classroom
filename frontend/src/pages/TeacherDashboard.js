@@ -8,7 +8,7 @@ const TeacherDashboard = () => {
     const fetchStudents = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/teachers/students', {
+        const response = await axios.get('https://classroombackend-2kdy.onrender.com/api/teachers/students', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setStudents(response.data);
